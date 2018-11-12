@@ -1,0 +1,17 @@
+{
+ "package": "Hole Locator",
+ "language": "python",
+ "author": "SAC Hydroponics",
+ "description": "Moves FarmBot arm to deposit seeds in a grid pattern using absolute coordinates.",
+ "version": "1.0.1",
+ "min_os_version_major": 6,
+ "url": "https://raw.githubusercontent.com/SAC-Hydroponics/legacy-seeding-path/master/manifest.json",
+ "zip": "https://github.com/SAC-Hydroponics/legacy-seeding-path/archive/master.zip",
+ "executable": "python",
+ "args": ["legacy-seeding-path-master/legacy_seeding_path.py"],
+ "config": [
+   {"name": "start_x", "label": "Start X(mm)", "value": 0 },
+   {"name": "start_y", "label": "Start Y(mm)", "value": 0 },
+   {"name": "start_z", "label": "Start Z(mm)", "value": 0 }
+ ]
+}
