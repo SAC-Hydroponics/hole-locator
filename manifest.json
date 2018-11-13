@@ -8,10 +8,5 @@
  "url": "https://raw.githubusercontent.com/SAC-Hydroponics/hole-locator/master/manifest.json",
  "zip": "https://github.com/SAC-Hydroponics/hole-locator/archive/master.zip",
  "executable": "python",
- "args": ["legacy-seeding-path-master/hole_locator.py"],
- "config": [
-   {"name": "start_x", "label": "Start X(mm)", "value": 0 },
-   {"name": "start_y", "label": "Start Y(mm)", "value": 0 },
-   {"name": "start_z", "label": "Start Z(mm)", "value": 0 }
- ]
+ "args": ["legacy-seeding-path-master/hole_locator.py"]
 }
