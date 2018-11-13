@@ -3,7 +3,7 @@
 
 '''Take a photo.
 Take a photo using a USB or Raspberry Pi camera.
-'''
+
 
 import os
 from time import time, sleep
@@ -133,3 +133,4 @@ if __name__ == '__main__':
         rpi_camera_photo()
     else:
         usb_camera_photo()
+'''
