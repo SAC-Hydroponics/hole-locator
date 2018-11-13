@@ -122,6 +122,8 @@ def rpi_camera_photo():
         log("Raspberry Pi Camera not detected.", "error")
 
 if __name__ == '__main__':
+    farmware_name = 'hole_locator'
+    
     try:
         CAMERA = os.environ['camera']
     except (KeyError, ValueError):
