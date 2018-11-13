@@ -3,7 +3,7 @@
 
 '''Take a photo.
 Take a photo using a USB or Raspberry Pi camera.
-
+'''
 
 import os
 from time import time, sleep
@@ -121,11 +121,8 @@ def rpi_camera_photo():
     except OSError:
         log("Raspberry Pi Camera not detected.", "error")
 
-'''
 if __name__ == '__main__':
     farmware_name = 'hole_locator'
-    
-   ''' 
     try:
         CAMERA = os.environ['camera']
     except (KeyError, ValueError):
@@ -135,5 +132,3 @@ if __name__ == '__main__':
         rpi_camera_photo()
     else:
         usb_camera_photo()
-        
-        '''
