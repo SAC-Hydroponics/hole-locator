@@ -12,6 +12,8 @@ import requests
 import numpy as np
 import cv2
 
+from farmware_tools import device
+
 
 def farmware_api_url():
     major_version = int(os.getenv('FARMBOT_OS_VERSION', '0.0.0')[0])
@@ -65,7 +67,7 @@ def upload_path(filename):
 def draw(img):
     #h,w = img.shape
     #cv2.circle(img,(int(h/2.0),int(w/2.0)),20,(0, 255, 255),-1)
-    log("drawing...", "error")
+    device.log('Drawing...', 'success', ['toast'])
 
     
 def usb_camera_photo():
