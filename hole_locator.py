@@ -106,7 +106,7 @@ def usb_camera_photo():
         else:
             filename = 'rotated_' + filename
         # Save the image to file
-        draw(filename)
+        #draw(filename)
         cv2.imwrite(upload_path(filename), final_image)
         print("Image saved: {}".format(upload_path(filename)))
     else:  # no image has been returned by the camera
