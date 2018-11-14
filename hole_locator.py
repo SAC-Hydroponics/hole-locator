@@ -63,7 +63,7 @@ def upload_path(filename):
     return path
 
 def draw(img):
-    h,w = img.shape
+    #h,w = img.shape
     #cv2.circle(img,(int(h/2.0),int(w/2.0)),20,(0, 255, 255),-1)
     log("drawing...", "success")
 
