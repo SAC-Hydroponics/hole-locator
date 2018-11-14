@@ -3,7 +3,7 @@
  "language": "python",
  "author": "SAC Hydroponics",
  "description": "Locates holes in foam growing media.",
- "version": "1.0.17",
+ "version": "1.0.18",
  "min_os_version_major": 6,
  "url": "https://raw.githubusercontent.com/SAC-Hydroponics/hole-locator/master/manifest.json",
  "zip": "https://github.com/SAC-Hydroponics/hole-locator/archive/master.zip",
