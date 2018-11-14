@@ -62,6 +62,10 @@ def upload_path(filename):
     path = images_dir + os.sep + filename
     return path
 
+def draw(img):
+    h,w = img.shape
+    cv2.circle(img,(h/2.0,w/2.0),20,(0,255,255),-1)
+    
 def usb_camera_photo():
     'Take a photo using a USB camera.'
     # Settings
@@ -102,6 +106,7 @@ def usb_camera_photo():
         else:
             filename = 'rotated_' + filename
         # Save the image to file
+        draw(filename)
         cv2.imwrite(upload_path(filename), final_image)
         print("Image saved: {}".format(upload_path(filename)))
     else:  # no image has been returned by the camera
