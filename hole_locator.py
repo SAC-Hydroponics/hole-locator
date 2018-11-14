@@ -64,7 +64,7 @@ def upload_path(filename):
     path = images_dir + os.sep + filename
     return path
 
-def draw(img):
+def draw():
     #h,w = img.shape
     #cv2.circle(img,(int(h/2.0),int(w/2.0)),20,(0, 255, 255),-1)
     device.log('Drawing...', 'success', ['toast'])
@@ -99,9 +99,8 @@ def usb_camera_photo():
     # Close the camera
     camera.release()
     
-    log("drawing...", "success")
     
-    draw(image)
+    draw()
 
     # Output
     if ret:  # an image has been returned by the camera
@@ -125,8 +124,7 @@ def rpi_camera_photo():
     try:
         filename_path = upload_path(image_filename())
         retcode = call(
-            #["raspistill", "-w", "1080", "-h", "720", "-o", filename_path])
-            ["raspistill", "-o", filename_path])
+            ["raspistill", "-w", "640", "-h", "480", "-o", filename_path])
         if retcode == 0:
             print("Image saved: {}".format(filename_path))
         else:
