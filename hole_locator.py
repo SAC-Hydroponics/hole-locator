@@ -64,7 +64,7 @@ def upload_path(filename):
 
 def draw(img):
     h,w = img.shape
-    cv2.circle(img,(h/2.0,w/2.0),20,(0,255,255),-1)
+    cv2.circle(img,(int(h/2.0),int(w/2.0)),20,(0, 255, 255),-1)
     
 def usb_camera_photo():
     'Take a photo using a USB camera.'
