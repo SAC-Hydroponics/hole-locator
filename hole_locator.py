@@ -94,11 +94,12 @@ def usb_camera_photo():
 
     # Close the camera
     camera.release()
+    
+    draw(image)
 
     # Output
     if ret:  # an image has been returned by the camera
         filename = image_filename()
-        draw(image)
         # Try to rotate the image
         try:
             final_image = rotate(image)
