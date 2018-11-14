@@ -97,6 +97,8 @@ def usb_camera_photo():
     # Close the camera
     camera.release()
     
+    log("drawing...", "error")
+    
     draw(image)
 
     # Output
