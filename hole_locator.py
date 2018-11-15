@@ -66,12 +66,11 @@ def upload_path(filename):
 
 def draw():
     #h,w = img.shape
-    for pt in zip(*loc[::-1]):
-    h=480
-    w=640
-    cv2.rectangle(img, pt, (pt[0] + w, pt[1] + h), (0,255,255), 1)
+    #h=480
+    #w=640
+    cv2.line(img,(0,0),(200,200),(0,255,255),20)
     device.log('Drawing...', 'success', ['toast'])
-
+    
     
 def usb_camera_photo():
     'Take a photo using a USB camera.'
