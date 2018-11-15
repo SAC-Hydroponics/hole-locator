@@ -68,7 +68,7 @@ def draw():
     #h,w = img.shape
     h=480
     w=640
-    cv.circle(img,(int(h/2.0),int(w/2.0)),20,(0, 255, 255),1)
+    cv2.circle(img,(int(h/2.0),int(w/2.0)),int(100),(0, 255, 255),1)
     device.log('Drawing...', 'success', ['toast'])
 
     
@@ -97,7 +97,7 @@ def usb_camera_photo():
 
     # Take a photo
     ret, image = camera.read()
-
+    
     # Close the camera
     camera.release()
     
