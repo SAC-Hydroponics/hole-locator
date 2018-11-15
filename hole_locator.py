@@ -64,7 +64,7 @@ def upload_path(filename):
     path = images_dir + os.sep + filename
     return path
 
-def draw():
+def draw(img):
     #h,w = img.shape
     #h=480
     #w=640
@@ -102,7 +102,7 @@ def usb_camera_photo():
     camera.release()
     
     
-    draw()
+    draw(image)
 
     # Output
     if ret:  # an image has been returned by the camera
