@@ -66,9 +66,10 @@ def upload_path(filename):
 
 def draw():
     #h,w = img.shape
+    for pt in zip(*loc[::-1]):
     h=480
     w=640
-    cv2.rectangle(img,(h/2.0),(w/2.0),(0, 255, 255),1)
+    cv2.rectangle(img, pt, (pt[0] + w, pt[1] + h), (0,255,255), 1)
     device.log('Drawing...', 'success', ['toast'])
 
     
