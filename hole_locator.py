@@ -68,7 +68,7 @@ def draw():
     #h,w = img.shape
     h=480
     w=640
-    cv2.circle(img,(int(h/2.0),int(w/2.0)),20,(0, 255, 255),-1)
+    cv.circle(img,(int(h/2.0),int(w/2.0)),20,(0, 255, 255),1)
     device.log('Drawing...', 'success', ['toast'])
 
     
