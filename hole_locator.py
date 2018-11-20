@@ -72,9 +72,9 @@ def draw(img):
     
     img_rgb = img
     img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
-    device.log('Drawing...', 'success', ['toast'])
 
     template = cv2.imread('template_1.jpg',0)
+    device.log('Drawing...', 'success', ['toast'])
     w, h = template.shape[::-1]
     
     res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
