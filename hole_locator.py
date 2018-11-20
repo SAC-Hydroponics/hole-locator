@@ -69,10 +69,10 @@ def draw(img):
     #h=480
     #w=640
     cv2.circle(img,((640/2), (480/2)), 10, (0,255,255), 3)
-    device.log('Drawing...', 'success', ['toast'])
     
     img_rgb = img
     img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+    device.log('Drawing...', 'success', ['toast'])
 
     template = cv2.imread('template_1.jpg',0)
     w, h = template.shape[::-1]
