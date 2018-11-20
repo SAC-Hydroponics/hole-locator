@@ -71,6 +71,23 @@ def draw(img):
     cv2.circle(img,((640/2), (480/2)), 10, (0,255,255), 3)
     device.log('Drawing...', 'success', ['toast'])
     
+    img_rgb = img
+    img_gray = cv2.cvtColor(img_rgb, cv2.COLOR_BGR2GRAY)
+
+    template = cv2.imread('template_1.jpg',0)
+    w, h = template.shape[::-1]
+    
+    res = cv2.matchTemplate(img_gray,template,cv2.TM_CCOEFF_NORMED)
+    threshold = 0.8
+    loc = np.where( res >= threshold)
+    
+    for pt in zip(*loc[::-1]):
+        cv2.rectangle(img_rgb, pt, (pt[0] + w, pt[1] + h), (0,255,255), 2)
+    
+    return img_rgb
+
+    #cv2.imshow('Detected',img_rgb)
+    
     
 def usb_camera_photo():
     'Take a photo using a USB camera.'
@@ -101,17 +118,16 @@ def usb_camera_photo():
     # Close the camera
     camera.release()
     
-    
-    draw(image)
+    foundImage = draw(image)
 
     # Output
     if ret:  # an image has been returned by the camera
         filename = image_filename()
         # Try to rotate the image
         try:
-            final_image = rotate(image)
+            final_image = rotate(foundImage)
         except:
-            final_image = image
+            final_image = foundImage
         else:
             filename = 'rotated_' + filename
         # Save the image to file
